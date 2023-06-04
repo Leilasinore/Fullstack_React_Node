@@ -1,8 +1,10 @@
+import { useAppContext } from "../context/appContext"
 
 
 const Alert = () => {
+  const {alertType, alertText } =useAppContext()
   return (
-    <div className='alert alert-danger'>
+    <div className={`alert alert-${alertType}`}>
       alert goes here
     </div>
   )
